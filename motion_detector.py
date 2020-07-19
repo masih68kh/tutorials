@@ -1,6 +1,7 @@
 import cv2, time, pandas
 from datetime import datetime
 import numpy as np
+import pandas as np
 
 first_frame=None
 status_list=[None,None]
@@ -8,6 +9,8 @@ times=[]
 df=pandas.DataFrame(columns=["Start","End"])
 
 video=cv2.VideoCapture(0)
+
+print("Added Line in local")
 
 while True:
     check, frame = video.read()
@@ -66,3 +69,4 @@ df.to_csv("Times.csv")
 
 video.release()
 cv2.destroyAllWindows
+
